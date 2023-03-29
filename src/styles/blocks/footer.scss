@@ -1,0 +1,235 @@
+.footer {
+  min-height: 478px;
+  background-color: $colorBlack;
+  margin-top: 50px;
+  padding-bottom: 35px;
+
+  &-title {
+    font-family: 'InterBolt', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: $colorWhite;
+    text-decoration: none;
+    display: block;
+    padding-top: 50px;
+  }
+
+  &-content {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 45px;
+    border-top: 1px solid $colorWhite;
+    display: flex;
+    gap: 96px;
+
+    @include onTabletXL {
+      flex-direction: column;
+    }
+
+    @include onTablet {
+      margin-left: 20px;
+      margin-right: 20px;
+      gap: 58px;
+    }
+
+    &-links {
+      display: flex;
+      gap: 60px;
+      margin-left: 20px;
+
+      @include onTabletXL {
+        justify-content: space-between;
+      }
+
+      @include onTablet {
+        flex-wrap: wrap;
+        gap: 78px;
+        justify-content: space-between;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    gap: 60px;
+    margin-right: 96px;
+  }
+}
+
+.reach-us {
+  &-title {
+    font-family: 'PoppinsMedium', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: $colorWhite;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &-items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    @include onMobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &-link {
+    width: 282px;
+    font-family: 'PoppinsNormal', sans-serif;
+    color: $colorWhite;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include onTablet {
+      font-size: 12px;
+      line-height: 18px;
+      white-space: normal;
+      width: 143px;
+    }
+  }
+}
+
+.links {
+  &-title {
+    font-family: 'PoppinsMedium', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: $colorWhite;
+
+    @include onTablet {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &-items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include onTablet {
+      grid-template: 20px;
+    }
+  }
+
+  &-item-link {
+    font-family: 'PoppinsNormal', sans-serif;
+    color: $colorWhite;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include onTablet {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.join-box {
+  height: 184px;
+  width: 304px;
+  border-radius: 10px;
+  background-color: #131313;
+  margin-top: 20px;
+
+  @include onMobile {
+    margin: auto;
+    width: 320px;
+  }
+
+  &-title {
+    font-family: 'PoppinsMedium', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: $colorWhite;
+    margin: 14px 14px 30px 14px;
+
+    @include onTablet {
+      font-size: 16px;
+      margin: 14px 14px 24px 14px;
+    }
+  }
+
+  &-input {
+    background-color: #1E1E1E;
+    border-radius: 4px;
+    outline: none;
+    border-radius: 0%;
+    border: none;
+    height: 39px;
+    width: 172px;
+    left: 1070px;
+    margin-left: 14px;
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #616161;
+    padding-left: 10px;
+
+    &::placeholder {
+      font-family: 'PoppinsMedium';
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      color: #616161;
+      padding-top: 12px;
+    }
+  }
+
+  &-subscribtion {
+    display: flex;
+  }
+
+  &-button {
+    width: 105px;
+    background-color: $colorBlack;
+    color: $colorWhite;
+    font-family: 'PoppinsMedium';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 14px;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+  }
+}
+
+.subscribe-text {
+  font-family: 'PoppinsMedium';
+  font-weight: 450;
+  font-size: 13px;
+  line-height: 18px;
+  color: $colorWhite;
+  opacity: 0.5;
+  margin: 14px 20px;
+}

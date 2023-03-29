@@ -1,0 +1,428 @@
+.contact {
+  &-form {
+    max-width: 1196px;
+    //height: 667px;
+    color: $colorWhite;
+    margin: auto;
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-direction: column;
+      width: 620px;
+      margin-top: 25px;
+    }
+
+    @include onMobile {
+      width: 330px;
+    }
+
+  }
+
+  &-info {
+    width: 490px;
+    height: 646px;
+    background-color: $colorBlack;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+
+    @include onTablet {
+      width: 600px;
+    }
+
+    @include onMobile {
+      width: 310px;
+      height: 398px;
+    }
+
+  }
+
+  &-title {
+    font-family: 'PoppinsMedium', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: $colorWhite;
+    padding-left: 40px;
+    padding-top: 40px;
+    margin: 0;
+
+    @include onTablet {
+      text-align: center;
+    }
+
+    @include onMobile {
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 0px;
+      padding-top: 15px;
+    }
+
+    &-info {
+      font-family: 'PoppinsNormal', sans-serif;
+      color: $colorWhite;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      padding-left: 40px;
+      padding-top: 6px;
+      margin: 0;
+
+      @include onTablet {
+        text-align: center;
+      }
+
+      @include onMobile {
+        font-size: 11px;
+        line-height: 16px;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  &-items {
+    margin-top: 110px;
+    margin-bottom: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 40px;
+    margin-right: 118px;
+
+    @include onTablet {
+      align-items: center;
+      margin-top: 30px;
+      margin-right: 40px;
+      margin-bottom: 68px;
+    }
+
+    @include onMobile {
+      gap: 20px;
+      margin-bottom: 58px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+
+    @include onTablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include onMobile {
+      gap: 10px;
+    }
+
+    &-link {
+      font-family: 'PoppinsNormal', sans-serif;
+      color: $colorWhite;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      @include onMobile {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  left: 65%;
+  top: 75%;
+  background: rgba(72, 72, 72, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+
+  @include onMobile {
+    width: 60px;
+    height: 60px;
+    left: 75%;
+    top: 75%;
+  }
+}
+
+.cropped-circle {
+  background-color:#1A1A1A;
+  position: absolute; 
+  width: 269px; 
+  height: 269px;
+  bottom: 0; 
+  right: 0;
+  clip-path: circle(50% at 100% 100%);
+
+  @include onMobile {
+    width: 154px; 
+    height: 154px;
+  }
+}
+
+.social {
+  &-icons {
+    display: flex;
+    gap: 24px;
+    padding-left: 40px;
+
+    @include onTablet {
+      display: flex;
+      justify-content: center;
+      padding-left: 0px;
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+    &:hover {
+      filter: invert(1);
+      transition: all 0.3s ease;
+    }
+  
+    &-circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  
+      &:hover {
+        content: $whiteCircle;
+        filter: invert(1);
+      }
+    }
+  
+  
+    &-logo {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.twich {
+  height: 10px;
+  width: 15px;
+}
+
+.insta {
+  height: 15px;
+  width: 15px;
+  filter: invert(1);
+}
+
+.twitter {
+  width: 15px;
+  height: 12px;
+}
+
+.personal-info {
+  margin-top: 60px;
+  margin-left: 40px;
+  margin-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @include onTablet {
+    margin-left: 40px;
+  }
+
+  @include onMobile {
+    margin-left: 20px;
+  }
+
+  &-field {
+    @include onTablet {
+      width: 100%;
+    }
+  }
+
+  &-label {
+    display: block;
+    color: $colorGrayForm;
+    font-family: 'PoppinsNormal', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &-input {
+    width: 274px;
+    border: none;
+    border-bottom: 1px solid $colorGrayForm;
+    font-size: 14px;
+    line-height: 30px;
+    outline: none;
+    color: $colorGrayForm;
+    font-family: 'PoppinsNormal', sans-serif;
+
+    @include onTablet {
+      width: 100%;
+    }
+
+    @include onMobile {
+      width: 274px;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $colorBlack;
+    }
+  }
+}
+
+.entered {
+  color: $colorBlack;
+}
+
+.form-to-fill {
+  flex: 1;
+}
+
+.select-title {
+  font-family: 'PoppinsMedium', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: $colorBlack;
+}
+
+.select-form {
+  margin-top: 45px;
+  margin-left: 40px;
+
+  @include onTablet {
+    margin-top: 60px;
+  }
+
+  @include onMobile {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+}
+
+.input-label {
+  font-family: 'PoppinsNormal', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $colorBlack;
+}
+
+.radio-container {
+  display: flex;
+  gap: 20px;
+  padding-top: 14px;
+
+  @include onMobile {
+    flex-wrap: wrap;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+
+  + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 14px;
+      margin-right: 10px;
+      background-image: $radioCircle;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+  }
+
+  &:checked + label:before {
+    background-image: $radioChecked;
+  }
+}
+
+.message {
+  &-form {
+    margin: 45px 50px 45px 40px;
+
+    @include onMobile {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $colorGrayForm;
+    font-size: 14px;
+    line-height: 30px;
+    outline: none;
+    color: $colorGrayForm;
+    font-family: 'PoppinsNormal', sans-serif;
+    padding: 0;
+
+    &:focus {
+      border-bottom: 1px solid $colorBlack;
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.send-button {
+  height: 54px;
+  width: 214px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  background-color: $colorBlack;
+  outline: none;
+  padding: 0;
+  border: none;
+  font-family: 'PoppinsNormal', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $colorWhite;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.send-image {
+  &-container {
+    display: flex;
+    margin-right: 133px;
+    flex-direction: row-reverse;
+       height: 200px;
+  }
+
+  @include onMobile {
+    width: 200px;
+  }
+}

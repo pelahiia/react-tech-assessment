@@ -1,0 +1,143 @@
+.header {
+  color: $backgroundColor;
+  padding: 40px 100px;
+  position: sticky;
+  @include onTablet {
+    padding: 30px 20px;
+  }
+
+  @include onMobile {
+    &-open {
+      height: 476px;
+      background-color: $colorBlack;
+
+      & .navbar {
+        flex-direction: column;
+      }
+
+      & .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin-top: 58px;
+        margin-bottom: 60px;
+
+        &-links {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-self: flex-start;
+        }
+      }
+
+      & .nav-item {
+        color: $colorWhite;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      & .logo-text {
+        color: $colorWhite
+      }
+
+      & .nav-item-icon {
+        filter: invert(1);
+      }
+
+      .features-image {
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.logo-text {
+  font-family: 'InterBolt', sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 800;
+  color: $colorBlack;
+  margin-right: 15px;
+}
+
+.navbar-mobile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+
+  @include onMobile {
+    display: none;
+  }
+  
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 46px;
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+  }
+}
+
+.nav-item {
+  font-family: 'RobotoNormal', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: $colorLightBlack;
+
+  &-active {
+    color: $colorBlack;
+    font-weight: 600;
+  }
+
+  &-user {
+    height: 30px;
+    width: 30px;
+  }
+
+  &-cart {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  &-image {
+    height: 8px;
+    width: 12px;
+    padding-left: 5px;
+  }
+}
+
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+
+  @include onMobile {
+    display: block;
+  }
+}

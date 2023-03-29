@@ -1,0 +1,11 @@
+@import './vars';
+@import './mixins';
+@import './typography.scss';
+@import './blocks/header.scss';
+@import './blocks/contactUs.scss';
+@import './blocks/contactInfo.scss';
+@import './blocks/footer.scss';
+
+body {
+  margin: 0;
+}
